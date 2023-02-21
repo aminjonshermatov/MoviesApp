@@ -31,7 +31,7 @@ fun SetupNavController(navController: NavHostController, viewModel: MainViewMode
         }
 
         composable(route = Screens.Details.route + "/{id}") {navBackStackEntry ->  
-            DetailScreen(navController = navController, viewModel = viewModel, itemId = navBackStackEntry.arguments?.getString("Id") ?: "1")
+            DetailScreen(viewModel = viewModel, itemId = navBackStackEntry.arguments?.getString("Id") ?: "1")
         }
     }
 }
